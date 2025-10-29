@@ -1,14 +1,23 @@
-import Navbar from './navbar';
+import React from 'react';
 import './globals.css';
+import { Navbar, Footer } from './components';
 
+// --- Metadata (Server Component) ---
+export const metadata = {
+  title: 'Pheav Chhengthai | AI Engineer & Developer',
+  description: 'Aspiring AI Engineer and Developer Portfolio.',
+};
+
+// --- Root Layout Component ---
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-900 min-h-screen">
         <Navbar />
-        <div style={{ maxWidth: "820px", margin: "2rem auto", padding: "1rem", background: "#f5f6fa", borderRadius: "16px" }}>
+        <main className="pt-20">
           {children}
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );
