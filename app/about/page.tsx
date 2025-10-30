@@ -126,7 +126,7 @@ export default function AboutPage() {
                 <a href="/contact" className="block w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-indigo-500/50 transition-all">
                   Hire Me
                 </a>
-                <a href="#" className="block w-full px-4 py-2 border border-gray-700 rounded-lg font-semibold hover:border-indigo-500 hover:bg-indigo-500/10 transition-all">
+                <a href="/Pheav_Chhengthai_CV.pdf" download="Pheav_Chhengthai_CV.pdf" className="block w-full px-4 py-2 border border-gray-700 rounded-lg font-semibold hover:border-indigo-500 hover:bg-indigo-500/10 transition-all">
                   Download CV
                 </a>
               </div>

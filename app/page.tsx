@@ -101,7 +101,7 @@ function Hero() {
               </h2>
 
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed animate-fade-in-down" style={{ animationDelay: '0.4s' }}>
-                A passionate student with a <span className="text-indigo-400 font-semibold">growth mindset</span>, eager to build impactful AI and web solutions that help society evolve. Currently studying at Paragon International University.
+                A passionate student with a <span className="text-indigo-400 font-semibold">growth mindset</span>, eager to develop impactful AI and web solutions that help society evolve. Currently studying at Paragon International University and Institute of Foreign Languages.
               </p>
 
               {/* CTA Buttons */}

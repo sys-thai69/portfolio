@@ -29,9 +29,10 @@ This file contains all the placeholders and items you need to customize in your 
   - Update the div with class `w-48 h-48` to include an `<Image>` component
   - Recommended size: 400x400px, square format
   
-- [ ] **Download CV Button**: Add link to your CV/Resume PDF
-  - Line ~150: Replace `href="#"` with link to your CV file
-  - Place your CV in the `public` folder (e.g., `/public/cv/pheav-chhengthai-cv.pdf`)
+- [x] **Download CV Button**: ✅ **CONFIGURED** - Add your CV PDF file
+  - **File**: Place your CV as `public/Pheav_Chhengthai_CV.pdf`
+  - **See**: `HOW-TO-ADD-CV.md` for detailed instructions
+  - Button is ready and will work once you add the PDF file
 
 - [ ] **Twitter/X Link**: Add your Twitter/X profile URL
   - Line ~145: Replace `href="#"` with your Twitter profile URL

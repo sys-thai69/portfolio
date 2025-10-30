@@ -17,7 +17,7 @@ const educationHistory = [
   {
     years: '2019 - 2022',
     degree: 'High School',
-    institution: 'EZSTEM Education PreahYukunthor',
+    institution: 'E2STEM Education PreahYukunthor',
     notes: 'Completed secondary education.',
   },
   {
