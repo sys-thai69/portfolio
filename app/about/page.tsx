@@ -108,6 +108,7 @@ export default function AboutPage() {
                   className="object-cover w-full h-full scale-[1.15]"
                   style={{ objectPosition: 'center 35%' }}
                   quality={100}
+                  unoptimized
                   priority
                 />
               </div>
