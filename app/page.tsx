@@ -141,7 +141,7 @@ function Hero() {
                     alt="Pheav Chhengthai" 
                     width={384} 
                     height={384} 
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full scale-110"
                     priority
                   />
                 </div>

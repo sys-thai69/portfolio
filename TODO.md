@@ -5,29 +5,15 @@ This file contains all the placeholders and items you need to customize in your 
 ## 🎯 High Priority
 
 ### Home Page (`app/page.tsx`)
-- [ ] **Profile Photo on Homepage**: Add your profile picture
-  - **Location**: Line ~147 in `app/page.tsx`
-  - **Steps**:
-    1. Add your photo to the `public` folder (e.g., `public/profile.jpg` or `public/profile.png`)
-    2. Import Next.js Image component at the top: `import Image from 'next/image';`
-    3. Replace the placeholder div (lines 147-153) with:
-       ```tsx
-       <Image 
-         src="/profile.jpg" 
-         alt="Pheav Chhengthai" 
-         width={384} 
-         height={384} 
-         className="object-cover w-full h-full"
-         priority
-       />
-       ```
-  - **Recommended**: Square photo, at least 800x800px, professional headshot
-  - **Current**: Shows "PC" initials as placeholder
+- [x] **Profile Photo on Homepage**: ✅ **ADDED** - Your profile picture is now displayed!
+  - Using: `public/Pheav_Chhengthai_Profile_Picture.png`
+  - Next.js Image component with optimization
+  - Responsive and loads with priority for fast display
 
 ### About Page (`app/about/page.tsx`)
-- [ ] **Profile Image**: Replace the "PC" placeholder circle with your actual profile photo
-  - Update the div with class `w-48 h-48` to include an `<Image>` component
-  - Recommended size: 400x400px, square format
+- [x] **Profile Image**: ✅ **ADDED** - Your profile picture is displayed
+  - Using: `public/Pheav_Chhengthai_Profile_Picture.png`
+  - Optimized with Next.js Image component
   
 - [x] **Download CV Button**: ✅ **CONFIGURED** - Add your CV PDF file
   - **File**: Place your CV as `public/Pheav_Chhengthai_CV.pdf`
