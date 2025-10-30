@@ -105,8 +105,9 @@ export default function AboutPage() {
                   alt="Pheav Chhengthai" 
                   width={192} 
                   height={192} 
-                  className="object-cover w-full h-full scale-[1.8]"
+                  className="object-cover w-full h-full scale-[1.15]"
                   style={{ objectPosition: 'center 35%' }}
+                  quality={100}
                   priority
                 />
               </div>
