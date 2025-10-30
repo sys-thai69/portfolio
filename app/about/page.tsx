@@ -150,10 +150,10 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-6 text-indigo-400">My Story</h2>
               <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
                 <p>
-                  Hello! I'm a passionate student studying at <strong className="text-white">Paragon International University (PIU)</strong> and the <strong className="text-white">Institute of Foreign Language (IFL)</strong>. I'm driven by a <span className="text-indigo-400 font-semibold">growth mindset</span> and a desire to become a great <span className="text-purple-400 font-semibold">AI Engineer and Full-Stack Developer.</span>.
+                  Hello! I'm Pheav Chhengthia, a passionate student studying at <strong className="text-white">Paragon International University (PIU)</strong> and the <strong className="text-white">Institute of Foreign Language (IFL)</strong>. I am an easy-going person driven by a <span className="text-indigo-400 font-semibold">growth mindset</span> and have a strong desire to become a <span className="text-purple-400 font-semibold">AI Engineer and Full-Stack Developer</span>.
                 </p>
                 <p>
-                  My journey in technology started with my small curiosity of how things work, which evolved into a passion for building solutions that make a real difference. I love to embrace challenging environments that require complex problem-solving and continuous learning.
+                  My journey in technology and the industrial started with my small curiosity of how things work and inspire by how advance technology is made, which evolved into a passion for building solutions that make a real difference. I love to embrace challenging environments that require complex problem-solving and continuous learning.
                 </p>
                 <p>
                   My strengths include <strong className="text-indigo-400">analytical problem-solving</strong>, team collaboration, and adapting quickly to new technologies. When I'm not coding, I enjoy playing chess, exploring new tech trends, and contributing to open-source projects.
