@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import ScrollReveal from '../components/ScrollReveal';
 
 // --- Data ---
 const projects = [
@@ -78,12 +80,20 @@ function ProjectCard({ title, description, technologies, link, github, image, st
   category: string;
 }) {
   return (
-    <div className="glass rounded-2xl p-6 hover:glow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+    <motion.div 
+      whileHover={{ y: -10, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="glass rounded-2xl p-6 hover:glow-hover transition-all duration-300 group h-full flex flex-col"
+    >
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
-        <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+        <motion.div 
+          className="text-6xl mb-4"
+          whileHover={{ scale: 1.2, rotate: 10 }}
+          transition={{ type: "spring", stiffness: 400 }}
+        >
           {image}
-        </div>
+        </motion.div>
         <div className="flex flex-col items-end gap-2">
           <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
             status === 'Completed' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
@@ -102,40 +112,48 @@ function ProjectCard({ title, description, technologies, link, github, image, st
       <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
         {title}
       </h3>
-      <p className="text-gray-300 mb-5 leading-relaxed line-clamp-3">
+      <p className="text-gray-300 mb-5 leading-relaxed flex-grow">
         {description}
       </p>
 
       {/* Technologies */}
       <div className="flex flex-wrap gap-2 mb-5">
         {technologies.map((tech, idx) => (
-          <span key={idx} className="px-3 py-1 bg-indigo-600/30 text-indigo-300 text-sm rounded-lg border border-indigo-500/30 hover:bg-indigo-600/50 transition-colors">
+          <motion.span 
+            key={idx}
+            whileHover={{ scale: 1.1 }}
+            className="px-3 py-1 bg-indigo-600/30 text-indigo-300 text-sm rounded-lg border border-indigo-500/30 hover:bg-indigo-600/50 transition-colors cursor-default"
+          >
             {tech}
-          </span>
+          </motion.span>
         ))}
       </div>
 
       {/* Links */}
       <div className="flex gap-3 pt-4 border-t border-gray-700">
         {link !== '#' && (
-          <a
+          <motion.a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="flex-1 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-medium rounded-lg hover:shadow-lg hover:shadow-indigo-500/50 transition-all"
           >
             View Live
-          </a>
+          </motion.a>
         )}
         {github !== '#' && (
-          <a
+          <motion.a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="flex-1 px-4 py-2 border border-gray-600 text-gray-300 text-center font-medium rounded-lg hover:border-indigo-500 hover:bg-indigo-500/10 transition-all"
           >
             View Code
-          </a>
+          </motion.a>
         )}
         {link === '#' && github === '#' && (
           <div className="flex-1 px-4 py-2 bg-gray-700/50 text-gray-500 text-center font-medium rounded-lg cursor-not-allowed">
@@ -143,7 +161,7 @@ function ProjectCard({ title, description, technologies, link, github, image, st
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -189,7 +207,9 @@ export default function ProjectsPage() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <ScrollReveal key={index} direction="up" delay={index * 0.1}>
+              <ProjectCard {...project} />
+            </ScrollReveal>
           ))}
         </div>
 

@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Contact Methods
 function ContactMethods() {
