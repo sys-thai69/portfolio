@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import TypingAnimation from './components/TypingAnimation';
 import FloatingParticles from './components/FloatingParticles';
 import ScrollReveal from './components/ScrollReveal';
 import RotatingQuotes from './components/RotatingQuotes';
@@ -138,7 +137,7 @@ function Hero() {
               >
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  <TypingAnimation text="Pheav Chhengthai" speed={100} />
+                  Pheav Chhengthai
                 </span>
               </motion.h1>
 
