@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 // Stats Component
 function Stats() {
@@ -135,16 +136,14 @@ function Hero() {
                 
                 {/* Image container */}
                 <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-700 group-hover:border-indigo-500 transition-all duration-300 shadow-2xl">
-                  {/* TODO: Replace with your actual image */}
-                  {/* <Image src="/profile.jpg" alt="Pheav Chhengthai" width={384} height={384} className="object-cover" /> */}
-                  
-                  {/* Placeholder - Replace this div with Image component above */}
-                  <div className="w-full h-full bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-8xl font-bold text-white mb-2">PC</div>
-                      <div className="text-white/80 text-sm">Your Photo Here</div>
-                    </div>
-                  </div>
+                  <Image 
+                    src="/Pheav_Chhengthai_Profile_Picture.png" 
+                    alt="Pheav Chhengthai" 
+                    width={384} 
+                    height={384} 
+                    className="object-cover w-full h-full"
+                    priority
+                  />
                 </div>
 
                 {/* Floating badges */}

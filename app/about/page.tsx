@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 // --- SVG Icon Components ---
 const IconGithub = () => (
@@ -98,8 +99,15 @@ export default function AboutPage() {
           {/* Profile Image Placeholder */}
           <div className="md:col-span-1">
             <div className="glass rounded-2xl p-8 text-center sticky top-24">
-              <div className="w-48 h-48 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-6xl font-bold glow">
-                PC
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-indigo-500/50 glow">
+                <Image 
+                  src="/Pheav_Chhengthai_Profile_Picture.png" 
+                  alt="Pheav Chhengthai" 
+                  width={192} 
+                  height={192} 
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
               <h2 className="text-2xl font-bold mb-2">Pheav Chhengthai</h2>
               <p className="text-indigo-400 mb-4">AI Engineer & Developer</p>
