@@ -46,11 +46,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-  
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod"
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}               # Your Vercel API token
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}             # Your Vercel Org ID
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}     # Your Vercel Project ID
+          vercel-args: "--prod"                                   # This will deploy to production
