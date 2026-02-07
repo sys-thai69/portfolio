@@ -29,10 +29,13 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: format code with Prettier
+        run: npm run format
+
       - name: Check Prettier formatting
         run: npm run format:check
 
-      - name: Build project
+      - name: Build projects
         run: npm run build
 
   # Deploy to Vercel (uncomment and configure when ready)
