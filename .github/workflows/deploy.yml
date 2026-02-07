@@ -36,18 +36,18 @@ jobs:
         run: npm run build
 
   # Deploy to Vercel (uncomment and configure when ready)
-  # deploy:
-  #   name: Deploy to Vercel
-  #   needs: ci
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v4
-  #
-  #     - name: Deploy to Vercel
-  #       uses: amondnet/vercel-action@v25
-  #       with:
-  #         vercel-token: ${{ secrets.VERCEL_TOKEN }}
-  #         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-  #         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-  #         vercel-args: "--prod"
+  deploy:
+    name: Deploy to Vercel
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+  
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.yP1yIOmcIV2oc1fzsXhQ9GSg }}
+          vercel-org-id: ${{ secrets.skyvas-projects }}
+          vercel-project-id: ${{ secrets.83GXZbZh5zw6ZaMYfrrBnqBa1PB9 }}
+          vercel-args: "--prod"
