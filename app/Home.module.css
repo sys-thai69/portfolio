@@ -1,11 +1,11 @@
 .container {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
   background: #fafafa;
   border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(44,62,80,0.1);
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.1);
 }
 
 .header {
@@ -16,7 +16,7 @@
 .header h1 {
   font-size: 2.7rem;
   font-weight: bold;
-  color: #212A3E;
+  color: #212a3e;
   margin-bottom: 1rem;
 }
 
@@ -35,7 +35,7 @@
   padding-left: 1rem;
   background: #fff;
   border-radius: 6px;
-  box-shadow: 0 1px 6px rgba(44,62,80,0.06);
+  box-shadow: 0 1px 6px rgba(44, 62, 80, 0.06);
 }
 
 .section h2 {
@@ -50,7 +50,7 @@
 
 .section li {
   font-size: 1rem;
-  color: #212A3E;
+  color: #212a3e;
   margin-bottom: 0.45rem;
 }
 

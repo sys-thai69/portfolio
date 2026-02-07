@@ -55,6 +55,7 @@ pm2 restart portfolio
 ```
 
 **That's it!** Your CV will be downloadable at:
+
 - https://portfolio.chhengthai.tech/about
 
 ---
@@ -64,11 +65,13 @@ pm2 restart portfolio
 If you want to use a different filename, update the link in `app/about/page.tsx`:
 
 **Find this line (around line 150):**
+
 ```tsx
 <a href="/Pheav_Chhengthai_CV.pdf" download="Pheav_Chhengthai_CV.pdf" ...>
 ```
 
 **Change both instances of the filename:**
+
 ```tsx
 <a href="/Your_Custom_Name.pdf" download="Your_Custom_Name.pdf" ...>
 ```
@@ -106,4 +109,5 @@ Then place your PDF with that name in the `public` folder.
 ---
 
 **Need help?** The download button is already configured in:
+
 - `app/about/page.tsx` (line ~150)

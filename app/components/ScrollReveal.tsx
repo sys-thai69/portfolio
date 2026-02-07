@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
   delay?: number;
   className?: string;
 }
 
-export default function ScrollReveal({ 
-  children, 
-  direction = 'up', 
+export default function ScrollReveal({
+  children,
+  direction = "up",
   delay = 0,
-  className = ''
+  className = "",
 }: ScrollRevealProps) {
   const directionOffset = {
     up: { y: 40 },

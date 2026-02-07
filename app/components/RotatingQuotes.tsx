@@ -1,54 +1,54 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const quotes = [
   {
     text: "The only way to do great work is to love what you do.",
-    author: "Steve Jobs"
+    author: "Steve Jobs",
   },
   {
     text: "Innovation distinguishes between a leader and a follower.",
-    author: "Steve Jobs"
+    author: "Steve Jobs",
   },
   {
     text: "The future belongs to those who believe in the beauty of their dreams.",
-    author: "Eleanor Roosevelt"
+    author: "Eleanor Roosevelt",
   },
   {
     text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    author: "Winston Churchill"
+    author: "Winston Churchill",
   },
   {
     text: "The best way to predict the future is to invent it.",
-    author: "Alan Kay"
+    author: "Alan Kay",
   },
   {
     text: "Code is like humor. When you have to explain it, it's bad.",
-    author: "Cory House"
+    author: "Cory House",
   },
   {
     text: "First, solve the problem. Then, write the code.",
-    author: "John Johnson"
+    author: "John Johnson",
   },
   {
     text: "Artificial intelligence is the new electricity.",
-    author: "Andrew Ng"
+    author: "Andrew Ng",
   },
   {
     text: "The science of today is the technology of tomorrow.",
-    author: "Edward Teller"
+    author: "Edward Teller",
   },
   {
     text: "Learning never exhausts the mind.",
-    author: "Leonardo da Vinci"
-  }
+    author: "Leonardo da Vinci",
+  },
 ];
 
 export default function RotatingQuotes() {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -86,12 +86,23 @@ export default function RotatingQuotes() {
         return () => clearTimeout(timeout);
       } else {
         // Fully deleted, move to next quote
-        setIsDeleting(false);
-        setIsTyping(true);
-        setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
+        const timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setIsTyping(true);
+          setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
+        }, 0);
+        return () => clearTimeout(timeout);
       }
     }
-  }, [displayedText, isTyping, isDeleting, currentQuote.text, typingSpeed, deletingSpeed, displayDuration]);
+  }, [
+    displayedText,
+    isTyping,
+    isDeleting,
+    currentQuote.text,
+    typingSpeed,
+    deletingSpeed,
+    displayDuration,
+  ]);
 
   return (
     <div className="glass p-8 rounded-2xl min-h-[200px] flex flex-col justify-center">
@@ -103,7 +114,7 @@ export default function RotatingQuotes() {
           exit={{ opacity: 0 }}
           className="mb-6"
         >
-          <div className="text-6xl text-indigo-400 mb-4">"</div>
+          <div className="text-6xl text-indigo-400 mb-4">&ldquo;</div>
           <p className="text-xl md:text-2xl text-gray-200 font-medium italic mb-4 min-h-[80px] flex items-center justify-center">
             {displayedText}
             <motion.span
@@ -113,7 +124,7 @@ export default function RotatingQuotes() {
             />
           </p>
         </motion.div>
-        
+
         <AnimatePresence mode="wait">
           {!isTyping && !isDeleting && (
             <motion.div
@@ -135,12 +146,10 @@ export default function RotatingQuotes() {
           <motion.div
             key={index}
             className={`h-2 rounded-full transition-all duration-300 ${
-              index === currentQuoteIndex 
-                ? 'w-8 bg-indigo-500' 
-                : 'w-2 bg-gray-600'
+              index === currentQuoteIndex ? "w-8 bg-indigo-500" : "w-2 bg-gray-600"
             }`}
             animate={{
-              scale: index === currentQuoteIndex ? 1 : 0.8
+              scale: index === currentQuoteIndex ? 1 : 0.8,
             }}
           />
         ))}

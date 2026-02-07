@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface TypingAnimationProps {
   text: string;
@@ -8,15 +8,19 @@ interface TypingAnimationProps {
   speed?: number;
 }
 
-export default function TypingAnimation({ text, className = '', speed = 100 }: TypingAnimationProps) {
-  const [displayedText, setDisplayedText] = useState('');
+export default function TypingAnimation({
+  text,
+  className = "",
+  speed = 100,
+}: TypingAnimationProps) {
+  const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
+        setDisplayedText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
       }, speed);
 
       return () => clearTimeout(timeout);

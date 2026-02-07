@@ -1,14 +1,26 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
+import Link from "next/link";
 
 // --- Navbar Component ---
 const IconMenu = ({ isOpen }: { isOpen: boolean }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     {isOpen ? (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     ) : (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 6h16M4 12h16m-7 6h7"
+      />
     )}
   </svg>
 );
@@ -17,22 +29,25 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/education', label: 'Education' },
-    { href: '/experience', label: 'Experience' },
-    { href: '/skills', label: 'Skills' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/contact', label: 'Contact' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/education", label: "Education" },
+    { href: "/experience", label: "Experience" },
+    { href: "/skills", label: "Skills" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-gray-700">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-white transition-colors hover:text-indigo-400">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-white transition-colors hover:text-indigo-400"
+          >
             Pheav Chhengthai
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
@@ -83,16 +98,20 @@ export function Navbar() {
 // --- Footer Component ---
 export function Footer() {
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/sys-thai69', icon: '🐙' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/chhengthai-pheav-39a683255/', icon: '💼' },
-    { name: 'Email', url: 'mailto:p.chhengthai@gmail.com', icon: '📧' },
+    { name: "GitHub", url: "https://github.com/sys-thai69", icon: "🐙" },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/chhengthai-pheav-39a683255/",
+      icon: "💼",
+    },
+    { name: "Email", url: "mailto:p.chhengthai@gmail.com", icon: "📧" },
   ];
 
   const quickLinks = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Projects', url: '/projects' },
-    { name: 'Contact', url: '/contact' },
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+    { name: "Projects", url: "/projects" },
+    { name: "Contact", url: "/contact" },
   ];
 
   return (
@@ -110,8 +129,8 @@ export function Footer() {
                 <a
                   key={link.name}
                   href={link.url}
-                  target={link.url.startsWith('http') ? '_blank' : undefined}
-                  rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  target={link.url.startsWith("http") ? "_blank" : undefined}
+                  rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-2xl hover:scale-110 transition-transform"
                   aria-label={link.name}
                   title={link.name}
@@ -145,7 +164,10 @@ export function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>📍 Phnom Penh, Cambodia</li>
               <li>
-                <a href="mailto:p.chhengthai@gmail.com" className="hover:text-indigo-400 transition-colors">
+                <a
+                  href="mailto:p.chhengthai@gmail.com"
+                  className="hover:text-indigo-400 transition-colors"
+                >
                   📧 p.chhengthai@gmail.com
                 </a>
               </li>

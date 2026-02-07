@@ -5,16 +5,17 @@ This file contains all the placeholders and items you need to customize in your 
 ## 🎯 High Priority
 
 ### Home Page (`app/page.tsx`)
+
 - [x] **Profile Photo on Homepage**: ✅ **ADDED** - Your profile picture is now displayed!
   - Using: `public/Pheav_Chhengthai_Profile_Picture.png`
   - Next.js Image component with optimization
   - Responsive and loads with priority for fast display
 
 ### About Page (`app/about/page.tsx`)
+
 - [x] **Profile Image**: ✅ **ADDED** - Your profile picture is displayed
   - Using: `public/Pheav_Chhengthai_Profile_Picture.png`
   - Optimized with Next.js Image component
-  
 - [x] **Download CV Button**: ✅ **CONFIGURED** - Add your CV PDF file
   - **File**: Place your CV as `public/Pheav_Chhengthai_CV.pdf`
   - **See**: `HOW-TO-ADD-CV.md` for detailed instructions
@@ -25,15 +26,16 @@ This file contains all the placeholders and items you need to customize in your 
   - Or remove this social link if you don't use Twitter
 
 ### Projects Page (`app/projects/page.tsx`)
+
 - [ ] **Project Links**: Add actual URLs for all projects
   - Update `link: '#'` with live project URLs
   - Update `github: '#'` with GitHub repository URLs
-  
 - [ ] **Project Images**: Consider adding actual project screenshots
   - Replace emoji placeholders with real images
   - Recommended approach: Use Next.js Image component
 
 ### Contact Page (`app/contact/page.tsx`)
+
 - [ ] **Form Submission**: Implement actual form handling
   - Line ~85: Add backend endpoint or use a service like:
     - Formspree (https://formspree.io/)
@@ -44,42 +46,51 @@ This file contains all the placeholders and items you need to customize in your 
 ## 📝 Medium Priority
 
 ### Email Address
+
 ✅ **UPDATED**: Now using `p.chhengthai@gmail.com` across all pages:
-  - `app/about/page.tsx`
-  - `app/contact/page.tsx`
-  - `app/components.tsx` (Footer)
+
+- `app/about/page.tsx`
+- `app/contact/page.tsx`
+- `app/components.tsx` (Footer)
 
 ### Home Page (`app/page.tsx`)
+
 - [ ] **Stats Verification**: Update the statistics to match your actual experience
   - Years Coding
   - Projects Built count
   - Technologies count
 
 ### Education & Experience Pages
+
 - [ ] Verify all information is up to date
 - [ ] Add any new achievements or education milestones
 
 ### Skills Page
+
 - [ ] Update skills list with any new technologies you've learned
 - [ ] Organize by proficiency level (optional enhancement)
 
 ## 🎨 Design Enhancements (Optional)
 
 ### Images & Media
+
 - [ ] Add favicon (`public/favicon.ico`)
 - [ ] Add Open Graph image for social sharing (`public/og-image.png`)
 - [ ] Add project screenshots to `/public/projects/`
 
 ### SEO
+
 - [ ] Update `app/layout.tsx` metadata with more detailed descriptions
 - [ ] Add keywords
 - [ ] Add structured data (JSON-LD) for better search results
 
 ### Analytics (Optional)
+
 - [ ] Add Google Analytics or alternative
 - [ ] Add privacy policy page if tracking users
 
 ### Performance
+
 - [ ] Optimize images (use WebP format)
 - [ ] Add loading states for form submission
 - [ ] Test on mobile devices
@@ -87,6 +98,7 @@ This file contains all the placeholders and items you need to customize in your 
 ## 🚀 Deployment
 
 ### Before Deploying
+
 - [ ] Test all pages thoroughly
 - [ ] Check all links work correctly
 - [ ] Verify mobile responsiveness
@@ -94,17 +106,17 @@ This file contains all the placeholders and items you need to customize in your 
 - [ ] Review all content for typos
 
 ### Deployment Options
+
 - [ ] **Vercel** (Recommended for Next.js)
   - Connect your GitHub repository
   - Auto-deploys on push to main
-  
 - [ ] **Netlify**
   - Similar to Vercel, great for static sites
-  
 - [ ] **GitHub Pages**
   - Free hosting for static sites
 
 ### Post-Deployment
+
 - [ ] Update LinkedIn with portfolio link
 - [ ] Update GitHub profile README
 - [ ] Share on social media
@@ -115,8 +127,9 @@ This file contains all the placeholders and items you need to customize in your 
 If you don't want to build a backend, use one of these:
 
 1. **Formspree** (Free tier available)
+
    ```html
-   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"></form>
    ```
 
 2. **EmailJS** (Free tier: 200 emails/month)
@@ -146,6 +159,7 @@ If you don't want to build a backend, use one of these:
 ## 🎉 Notes
 
 Your portfolio now has:
+
 - ✅ Modern, professional design
 - ✅ Smooth animations and transitions
 - ✅ Glass morphism effects

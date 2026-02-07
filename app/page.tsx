@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import FloatingParticles from './components/FloatingParticles';
-import ScrollReveal from './components/ScrollReveal';
-import RotatingQuotes from './components/RotatingQuotes';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import FloatingParticles from "./components/FloatingParticles";
+import ScrollReveal from "./components/ScrollReveal";
+import RotatingQuotes from "./components/RotatingQuotes";
 
 // Stats Component
 function Stats() {
   const stats = [
-    { value: '3+', label: 'Years Coding' },
-    { value: '15+', label: 'Projects Built' },
-    { value: '10+', label: 'Technologies' },
-    { value: '100%', label: 'Dedication' },
+    { value: "3+", label: "Years Coding" },
+    { value: "15+", label: "Projects Built" },
+    { value: "10+", label: "Technologies" },
+    { value: "100%", label: "Dedication" },
   ];
 
   return (
@@ -29,9 +29,7 @@ function Stats() {
             whileHover={{ scale: 1.05, y: -5 }}
             className="text-center p-6 glass rounded-xl"
           >
-            <div className="text-3xl md:text-4xl font-bold text-indigo-400 mb-2">
-              {stat.value}
-            </div>
+            <div className="text-3xl md:text-4xl font-bold text-indigo-400 mb-2">{stat.value}</div>
             <div className="text-sm text-gray-400">{stat.label}</div>
           </motion.div>
         ))}
@@ -44,19 +42,20 @@ function Stats() {
 function FeaturedSection() {
   const features = [
     {
-      icon: '🤖',
-      title: 'AI & Machine Learning',
-      description: 'Building intelligent solutions with PyTorch, TensorFlow, and modern ML frameworks',
+      icon: "🤖",
+      title: "AI & Machine Learning",
+      description:
+        "Building intelligent solutions with PyTorch, TensorFlow, and modern ML frameworks",
     },
     {
-      icon: '💻',
-      title: 'Full-Stack Development',
-      description: 'Creating responsive web applications with React, Next.js, and Laravel',
+      icon: "💻",
+      title: "Full-Stack Development",
+      description: "Creating responsive web applications with React, Next.js, and Laravel",
     },
     {
-      icon: '🎯',
-      title: 'Problem Solving',
-      description: 'Analytical thinking and creative solutions to complex technical challenges',
+      icon: "🎯",
+      title: "Problem Solving",
+      description: "Analytical thinking and creative solutions to complex technical challenges",
     },
   ];
 
@@ -68,7 +67,7 @@ function FeaturedSection() {
             whileHover={{ y: -10, scale: 1.02 }}
             className="p-6 glass rounded-xl hover:glow-hover transition-all duration-300 h-full"
           >
-            <motion.div 
+            <motion.div
               className="text-5xl mb-4"
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
@@ -90,22 +89,22 @@ function Hero() {
     <section className="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-purple-900/10 to-gray-900 text-white relative overflow-hidden">
       {/* Floating Particles Background */}
       <FloatingParticles />
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute w-96 h-96 -top-48 -left-48 bg-indigo-500/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 4, repeat: Infinity }}
         />
-        <motion.div 
+        <motion.div
           className="absolute w-96 h-96 -bottom-48 -right-48 bg-purple-500/20 rounded-full blur-3xl"
-          animate={{ 
+          animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 4, repeat: Infinity, delay: 1 }}
         />
@@ -117,7 +116,7 @@ function Hero() {
             {/* Left Column - Text Content */}
             <div>
               {/* Badge */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -129,38 +128,42 @@ function Hero() {
               </motion.div>
 
               {/* Main heading with gradient */}
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-extrabold mb-4"
               >
-                Hi, I'm{' '}
+                Hi, I am{" "}
                 <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Pheav Chhengthai
                 </span>
               </motion.h1>
 
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-3xl md:text-4xl font-semibold text-gray-300 mb-6"
               >
-                Aspiring <span className="text-indigo-400">AI Engineer</span> & <span className="text-purple-400">Developer</span>
+                Aspiring <span className="text-indigo-400">AI Engineer</span> &{" "}
+                <span className="text-purple-400">Developer</span>
               </motion.h2>
 
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
               >
-                A passionate student with a <span className="text-indigo-400 font-semibold">growth mindset</span>, eager to develop impactful AI and web solutions that help society evolve. Currently studying at Paragon International University and Institute of Foreign Languages.
+                A passionate student with a{" "}
+                <span className="text-indigo-400 font-semibold">growth mindset</span>, eager to
+                develop impactful AI and web solutions that help society evolve. Currently studying
+                at Paragon International University and Institute of Foreign Languages.
               </motion.p>
 
               {/* CTA Buttons */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
@@ -194,7 +197,7 @@ function Hero() {
             </div>
 
             {/* Right Column - Profile Image */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -202,28 +205,28 @@ function Hero() {
             >
               <div className="relative group">
                 {/* Glow effect background */}
-                <motion.div 
-                  animate={{ 
+                <motion.div
+                  animate={{
                     scale: [1, 1.1, 1],
-                    opacity: [0.5, 0.8, 0.5]
+                    opacity: [0.5, 0.8, 0.5],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -inset-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-2xl"
                 />
-                
+
                 {/* Image container */}
-                <motion.div 
+                <motion.div
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-700 group-hover:border-indigo-500 transition-all duration-300 shadow-2xl"
                 >
-                  <Image 
-                    src="/Pheav_Chhengthai_Profile_Picture.png" 
-                    alt="Pheav Chhengthai" 
-                    width={384} 
-                    height={384} 
+                  <Image
+                    src="/Pheav_Chhengthai_Profile_Picture.png"
+                    alt="Pheav Chhengthai"
+                    width={384}
+                    height={384}
                     className="object-cover w-full h-full scale-[1.15]"
-                    style={{ objectPosition: 'center 35%' }}
+                    style={{ objectPosition: "center 35%" }}
                     quality={100}
                     unoptimized
                     priority
@@ -231,14 +234,14 @@ function Hero() {
                 </motion.div>
 
                 {/* Floating badges */}
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="absolute -top-4 -right-4 px-4 py-2 bg-green-500/90 backdrop-blur-sm rounded-full text-white text-sm font-semibold shadow-lg"
                 >
                   Open to Work
                 </motion.div>
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   className="absolute -bottom-4 -left-4 px-4 py-2 glass rounded-full text-white text-sm font-semibold shadow-lg"
@@ -265,13 +268,23 @@ function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        <svg
+          className="w-6 h-6 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
         </svg>
       </motion.div>
     </section>
